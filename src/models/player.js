@@ -1,67 +1,93 @@
-const mongoose = require('../db/index')
+const mongoose = require("../db/index");
 
 const playerSchema = new mongoose.Schema({
-    jogador: {
-        type: String,
-        required: true
+  jogador: {
+    type: String,
+    required: true,
+  },
+  heroi: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  identidade: {
+    nome: {
+      type: String,
+      unique: true,
     },
-    heroi: {
-        type: String,
-        required: true,
-        unique: true
+    secreta: {
+      type: Boolean,
     },
-    identidade: {
-        nome: {
-            type: String,
-            unique: true
-        },
-        secreta: {
-            type: Boolean
-        }
+  },
+  genero: {
+    type: String,
+    required: true,
+  },
+  idade: {
+    type: Number,
+    required: true,
+  },
+  altura: {
+    type: Number,
+    required: true,
+  },
+  peso: {
+    type: Number,
+    required: true,
+  },
+  olhos: {
+    type: String,
+  },
+  cabelos: {
+    type: String,
+  },
+  grupo_afiliado: {
+    nome: {
+      type: String,
     },
-    genero: {
-        type: String,
-        required: true
+    base: {
+      type: String,
     },
-    idade: {
-        type: Number,
-        required: true
+  },
+  nivel_de_poder: {
+    type: Number,
+    required: true,
+  },
+  imagem_url: {
+    type: String,
+  },
+  vida: {
+    type: String,
+    required: true,
+  },
+  atributos: {
+    forca: {
+      type: Number,
     },
-    altura: {
-        type: Number,
-        required: true
+    agilidade: {
+        type: Number
     },
-    peso: {
-        type: Number,
-        required: true
+    luta: {
+        type: Number
     },
-    olhos: {
-        type: String
+    prontidao: {
+        type: Number
     },
-    cabelos: {
-        type: String
+    vigor: {
+        type: Number
     },
-    grupo_afiliado: {
-        nome: {
-            type: String
-        },
-        base: {
-            type: String
-        }
+    destreza: {
+        type: Number
     },
-    nivel_de_poder: {
-        type: Number,
-        required: true
+    intelecto: {
+        type: Number
     },
-    imagem_url: {
-        type: String
-    },
-    vida: {
-        type: String,
-        required: true
+    presenca: {
+        type: Number
     }
-})
+  },
+});
 
-const Player = mongoose.model('Player', playerSchema)
+const Player = mongoose.model("Player", playerSchema);
 
-module.exports = Player
+module.exports = Player;
