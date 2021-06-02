@@ -44,7 +44,7 @@ router.put("/atualizar/:playerId", async (req, res) => {
 
     return res.send({ playerAtualizado });
   } catch (err) {
-    return res.send({ error: "Erro ao atualizar dados!" });
+    return res.send(err);
   }
 });
 

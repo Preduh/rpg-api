@@ -13,7 +13,6 @@ const playerSchema = new mongoose.Schema({
   identidade: {
     nome: {
       type: String,
-      unique: true,
     },
     secreta: {
       type: Boolean,
