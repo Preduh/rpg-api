@@ -64,26 +64,29 @@ const playerSchema = new mongoose.Schema({
       type: Number,
     },
     agilidade: {
-        type: Number
+      type: Number,
     },
     luta: {
-        type: Number
+      type: Number,
     },
     prontidao: {
-        type: Number
+      type: Number,
     },
     vigor: {
-        type: Number
+      type: Number,
     },
     destreza: {
-        type: Number
+      type: Number,
     },
     intelecto: {
-        type: Number
+      type: Number,
     },
     presenca: {
-        type: Number
-    }
+      type: Number,
+    },
+  },
+  pontos: {
+    type: Number,
   },
 });
 
